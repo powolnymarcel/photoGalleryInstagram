@@ -1,5 +1,5 @@
                                     //Les dépendances de l'app
-var app = angular.module('galPhoto',['ngRoute']);
+var app = angular.module('galPhoto',['ngRoute','ngResource']);
 
 app.config(['$routeProvider',function($routeProvider){
     $routeProvider.

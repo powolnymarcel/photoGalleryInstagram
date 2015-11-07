@@ -1,13 +1,24 @@
 <div ng-controller="GallerieCtrl">
     <h1>Photos populaire</h1>
     <div class="row gallery">
-        <div class="col-md-3">
-            <a href="">
-                <img class="main" src="" alt=""/>
-            </a>
-            <div class="imgInfo">
-                <img class="avatar img-circle" src="" alt=""/> Posté par : USERNAME
+        <div class="col-md-3" ng-repeat="img in images">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><span class="glyphicon glyphicon-heart"></span> : {{img.likes.count}}</h3>
+            </div>
+            <div class="panel-body">
+                <a href="">
+                    <img class="main" ng-src="{{img.images.low_resolution.url}}" alt=""/>
+                </a>
+                <div class="imgInfo">
+                <img class="avatar img-circle" ng-src="{{img.user.profile_picture}}" alt=""/> Par: {{img.user.username}}
+                </div>
             </div>
         </div>
+        </div>
+
+
+
     </div>
 </div>
